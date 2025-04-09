@@ -57,8 +57,8 @@ def generate_video(images, audio):
     audio_clip = AudioFileClip(audio)
     final_video = final_video.set_audio(audio_clip)
     video_filename = "output_video.mp4"
-    final_video.write_videofile(video_filename, codec="libx264", audio_codec='aac')
-    return video_filename
+    final_video.write_videofile(video_filename, codec="libx264", audio_codec="aac", fps=24)
+  return video_filename
 
 def cleanup(files):
     for file in files:
